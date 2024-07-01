@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    button.rotate:hover ~ img {
+      transform: rotate(180deg);
+      animation-name: karthik;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    img {
+      margin-top: 200px;
+      margin-left: 400px;
+    }
+    .Translate:hover ~ img {
+      width: 300px;
+      height: 300px;
+      background-color: black;
+      transition: width 3s height 2s;
+    }
+    .Skew:hover ~ img {
+      transform: skew(120deg);
+    }
+    .Scale:hover ~ img {
+      transform: scale(2);
+    }
+
+    @keyframes karthik {
+      0% {
+        transform: rotate(10deg);
+      }
+      25% {
+        transform: rotate(50deg);
+      }
+      50% {
+        transform: rotate(120deg);
+      }
+      75% {
+        transform: rotate(230deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div>
+      <button class="rotate">ROTATE</button>
+      <button class="Translate">Translate</button>
+      <button class="Skew">Skew</button>
+      <button class="Scale">Scale</button>
+      <br /><br />
+      <img
+      src="https://tse2.mm.bing.net/th?id=OIP.GaoHDSRd4FTZWa0LcF5_aAHaFW&pid=Api&P=0&h=180"
+      alt="" / width="200px" height="200px">
+    </div>
+  </body>
+</html>
